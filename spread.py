@@ -77,8 +77,8 @@ def viral_spread(population,hour,initial,movement):
 
   
 
-
-viral_spread(10000,1,2,20)
+#example 10000 population in 3 hours, 2 initial population with the virus, and 20 movements per hour.
+viral_spread(10000,3,2,20)
 
 
 
