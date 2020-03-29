@@ -4,8 +4,8 @@ import random
 from matplotlib import pyplot as plt
 from IPython.display import clear_output
 
-def viral_spread(population,hour,initial,movement):
-  time =hour*4
+def viral_spread(population,time,initial,movement):
+  
 
   grid_space=int(math.sqrt(population))
 
@@ -35,7 +35,7 @@ def viral_spread(population,hour,initial,movement):
 
   ax.set_yticklabels(np.arange(1, grid_space+1, 1));
 
-  spread_chance=[0]*94+[1]*6
+  spread_chance=[0]*76+[1]*24
 
   plot_list=[]
 
@@ -51,7 +51,7 @@ def viral_spread(population,hour,initial,movement):
 
           for a in range(-1,2):
             for b in range (-1,2):
-              grid[a,b] = random.choice(spread_chance)
+              grid[a+i,b+j] = random.choice(spread_chance)
 
         
           x_switch=0
